@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class MainGameController : MonoBehaviour {
 
-    public  ListItems listItems;
+    public ListItems listItems;
     public EffecttManager EffectManager; //control effect
-  
-    //MainGame se ra lenh cho ListItems Scroll cot. nao` co.t nao
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-      // gio ko chay o day nua
-    }
-    public void SpinColumn()
+
+
+    public void StopButton()
     {
-        listItems.isSpinning = true;
+
+        listItems.StopSpin();
+    }
+    public void ButtonStartSpin()
+    {
+        for (int i = 0; i < listItems.ListItemsColumn.Length; i++)
+        {
+            listItems.ListItemsColumn[i].isSpinning = true;
+        }
     }
 }
